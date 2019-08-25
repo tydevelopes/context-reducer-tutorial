@@ -39,7 +39,7 @@ const Pagination = ({ items, itemsPerPage }) => {
     console.log("useeffect");
 
     renderPage(1);
-  }, [items]);
+  }, []);
 
   const len = Math.ceil(items.length / itemsPerPage);
   const pages = Array.from({ length: len }, (_, i) => i).map((item, index) => {

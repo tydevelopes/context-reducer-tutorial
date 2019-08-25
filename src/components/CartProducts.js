@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { ProductsContext, CartListContext } from "../index";
+import Pagination from './pagination';
 
 const CartProducts = () => {
   const { products, productsDispatch, messageDispatch } = useContext(
@@ -112,8 +113,8 @@ const CartProducts = () => {
 
   return (
     <div>
-      <ul className="paginated_lists">{renderProducts}</ul>
       {renderClearButton}
+      <Pagination items={renderProducts} itemsPerPage={4} />
     </div>
   );
 };
